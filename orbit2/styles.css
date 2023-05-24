@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.png');
+
+}
+
+.solarsystem {
+    position: absolute;
+}
+
+.orbitearth {
+    animation: orbitearth 10s linear infinite;
+}
+
+.orbitmoon {
+    animation: orbitmoon 5s linear infinite;
+}
+
+.orbitmars {
+    animation: orbitmars 15s linear infinite;
+}
+
+.shadowblink {
+    animation: shadowblink 3s ease infinite alternate;
+}
+
+
+.moon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: -40px;
+    right: 30px;
+    filter: blur(0px);
+    box-shadow:
+        0 0 5px 1px #efefef,
+        0 0 10px 1px rgb(243, 245, 251),
+        0 0 40px 1px rgb(235, 234, 243);
+}
+
+.mars {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(224, 76, 13);
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    filter: blur(5px);
+    box-shadow:
+        0 0 60px 3px #efefef,
+        0 0 100px 3px rgb(225, 95, 48),
+        0 0 140px 3px rgb(246, 131, 8);
+}
+
+.earth {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(17, 83, 215);
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    filter: blur(1px);
+    box-shadow:
+        0 0 30px 5px #0d88f3,
+        0 0 500px 5px rgb(23, 71, 227),
+        0 0 70px 5px rgb(28, 8, 246);
+}
+
+.sun {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(226, 193, 32);
+    border-radius: 50%;
+    filter: blur(2px);
+    box-shadow:
+        0 0 60px 5px #e2c899,
+        0 0 100px 5px rgb(227, 180, 23),
+        0 0 140px 5px rgb(235, 183, 11);
+}
+
+@keyframes orbitmoon {
+    0% {
+        transform: rotate(0deg) translateY(55px) rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg) translateY(55px) rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateY(55px) rotate(360deg);
+    }
+}
+
+
+
+@keyframes orbitmars {
+    0% {
+        transform: rotate(0deg) translateY(450px) rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg) translateY(450px) rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateY(450px) rotate(360deg);
+    }
+}
+
+@keyframes orbitearth {
+    0% {
+        transform: rotate(0deg) translateY(300px) rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg) translateY(300px) rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateY(300px) rotate(360deg);
+    }
+}
+
+@keyframes shadowblink {
+    0% {
+        box-shadow:
+            0 0 40px 5px #e2c899,
+            0 0 70px 5px rgb(227, 180, 23),
+            0 0 100px 5px rgb(235, 183, 11);
+    }
+
+    100% {
+        box-shadow:
+            0 0 60px 5px #e2c899,
+            0 0 100px 5px rgb(227, 180, 23),
+            0 0 140px 5px rgb(235, 183, 11);
+    }
+}
