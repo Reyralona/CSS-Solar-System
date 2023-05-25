@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(25, 25, 25);
+            background-image: url('background.png');
+        }
+
+
+        .system>.sphere {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .system>div>.sphere {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sphere {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .glowyellow{
+            box-shadow: 0 0 200px 5px rgb(255, 255, 0);
+        }
+        .glowblue{
+            box-shadow: 0 0 200px 5px rgb(0, 119, 255);
+        }
+        .glowwhite{
+            box-shadow: 0 0 200px 5px rgb(241, 241, 231);
+        }
+        .gloworange{
+            box-shadow: 0 0 200px 5px rgb(255, 123, 0);
+        }
+        .glowgreen{
+            box-shadow: 0 0 200px 5px rgb(0, 255, 0);
+        }
+
+
+        .blur{
+            filter: blur(2px);
+        }
+
+        .red {
+            background-color: red;
+        }
+        .orange{
+            background-color: rgb(255, 102, 0);
+        }
+        .white {
+            background-color: white;
+        }
+
+        .blue {
+            background-color: rgb(0, 81, 255);
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green{
+            background-color: greenyellow;
+        }
+
+
+        .orbit80px {
+            animation: orbit80px 3s linear infinite;
+        }
+
+        .orbit100px {
+            animation: orbit100px 5s linear infinite;
+        }
+
+        .orbit500px {
+            animation: orbit500px 10s linear infinite;
+        }
+
+        .orbit800px {
+            animation: orbit800px 15s linear infinite;
+        }
+        .orbit1600px {
+            animation: orbit1600px 15s linear infinite;
+        }
+
+
+
+
+        @keyframes orbit80px {
+            0% {
+                transform: rotate(0deg) translateY(80px) rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-180deg) translateY(80px) rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(-360deg) translateY(80px) rotate(360deg);
+            }
+        }
+
+        @keyframes orbit100px {
+            0% {
+                transform: rotate(0deg) translateY(100px) rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-180deg) translateY(100px) rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(-360deg) translateY(100px) rotate(360deg);
+            }
+        }
+
+        @keyframes orbit500px {
+            0% {
+                transform: rotate(0deg) translateY(500px) rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-180deg) translateY(500px) rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(-360deg) translateY(500px) rotate(360deg);
+            }
+        }
+
+        @keyframes orbit800px {
+            0% {
+                transform: rotate(0deg) translateY(800px) rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-180deg) translateY(800px) rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(-360deg) translateY(800px) rotate(360deg);
+            }
+        }
+        @keyframes orbit1600px {
+            0% {
+                transform: rotate(0deg) translateY(1600px) rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-180deg) translateY(1600px) rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(-360deg) translateY(1600px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="system">
+        <div class="yellow sphere blur glowyellow">
+            <div class="orange sphere blur gloworange orbit800px" style="
+                width: 80px; 
+                height: 80px">
+            </div>
+            <div class="blue sphere blur glowblue orbit500px" style="
+                width: 60px; 
+                height: 60px";>
+                <div class="white sphere blur glowwhite orbit100px" style="
+                    width: 30px; 
+                    height: 30px"></div>
+            </div>
+            <div class="green sphere blur glowgreen orbit1600px">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
